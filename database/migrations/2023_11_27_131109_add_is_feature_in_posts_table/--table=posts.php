@@ -11,7 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        $table->string('title',500)->change();
+		$table->boolean('is_feature')->default(false)->after('content');
     }
 
     /**
