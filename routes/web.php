@@ -15,8 +15,13 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Post;
 Route::get('/', function () {
     //return view('welcome');
-    $post = new post();
-    $post->title = 'test title';
-    $post-> content = 'test content';
-    $post-> save();
+    //$post = new post();
+    //$post->title = 'test title';
+    //$post-> content = 'test content';
+    //$post-> save();
+    Post::create([
+        'title'=>'test title2',
+        'content'=>'test content2',
+    ]);
+    return 'saved';
 });
