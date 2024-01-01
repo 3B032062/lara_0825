@@ -12,7 +12,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+use App\Models\Post;
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    $post = new post();
+    $post->title = 'test title';
+    $post-> content = 'test content';
+    $post-> save();
 });
