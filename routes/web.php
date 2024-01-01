@@ -46,15 +46,27 @@ Route::get('/', function () {
     return 'updated';
     */
 
-    
+    /*save update
     $post = Post::find(1);
     $post->title = 'saved title';
     $post->content ='saved content';
     $post->save();
+    */
+
+    /*delete
+    $post=Post::find(1);
+    $post->delete();
+    return 'deleted';
+    */
+
+    /*destroy
+    Post::destroy(2);
+    return 'deleted';
+    */
 
 
-
-
+    Post::destroy(3,5,7);
+    return 'destroy';
 
 
 
