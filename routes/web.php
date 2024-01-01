@@ -69,8 +69,15 @@ Route::get('/', function () {
     return 'destroy';
     */
 
+    /*
     $allPosts = Post::all();
     dd($allPosts);
+    */
+    
+    $featurePosts=Post::where('is_feature',1)->get();
+    dd($featurePosts);
+
+
 
 
 
