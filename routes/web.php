@@ -64,9 +64,20 @@ Route::get('/', function () {
     return 'deleted';
     */
 
-
+    /*destroy 多筆
     Post::destroy(3,5,7);
     return 'destroy';
+    */
+
+    $allPosts = Post::all();
+    dd($allPosts);
+
+
+
+
+
+
+
 
 
 
