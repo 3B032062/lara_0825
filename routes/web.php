@@ -37,12 +37,25 @@ Route::get('/', function () {
     dd($posts);
     */
 
+    /*update
     $post = Post::find(1);
     $post->update([
         'title'=>'update title',
         'content'=>'update content',
     ]);
     return 'updated';
+    */
+
+    
+    $post = Post::find(1);
+    $post->title = 'saved title';
+    $post->content ='saved content';
+    $post->save();
+
+
+
+
+
 
 
 
